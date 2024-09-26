@@ -21,7 +21,10 @@ searchBtn.addEventListener('click', function () {
 });
 
 async function fetchCityData(city) {
-    const url = `https://travel-advisor.p.rapidapi.com/locations/search?query=pattay`;
+    // Properly encode the city name for URL
+    const encodedCity = encodeURIComponent(city);
+    const url = `https://travel-advisor.p.rapidapi.com/locations/search?query=${encodedCity}`; // Dynamically insert the city
+
     try {
         const response = await fetch(url, options);
         const data = await response.json();
@@ -33,7 +36,7 @@ async function fetchCityData(city) {
 }
 
 function displayResults(data) {
-    resultsDisplay.innerHTML = '';
+    resultsDisplay.innerHTML = '';  // Clear previous results
     const locations = data.data;
 
     if (locations && locations.length > 0) {
@@ -48,7 +51,7 @@ function displayResults(data) {
             `;
             resultsDisplay.appendChild(resultItem);
         });
-    // } else {
-    //     resultsDisplay.innerHTML = '<p>No results found. Try a different city.</p>';
-    // }
+    } else {
+        resultsDisplay.innerHTML = '<p>No results found. Try a different city.</p>';
+    }
 }
