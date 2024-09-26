@@ -6,7 +6,7 @@ const resultsDisplay = document.getElementById('resultsDisplay');
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': 'e377129c33mshb5b7890985593b2p11de28jsn9cedfc5985a9Y',  // Replace with your own RapidAPI key
+        'X-RapidAPI-Key': 'e377129c33mshb5b7890985593b2p11de28jsn9cedfc5985a9',  // Replace with your own RapidAPI key
         'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
     }
 };
