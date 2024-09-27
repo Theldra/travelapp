@@ -10,8 +10,17 @@ body {
     background-image: url(./images/img1.jpg), url(./images/img3.jpg);
     background-position: right bottom, left top;
     background-repeat: no-repeat, no-repeat;
-    background-size: contain;
-    
+    background-size: contain;  
+}
+
+@font-face{
+    font-family: 'Regale';
+    src: url(./fonts/History\ Regale\ Italic\ DEMO\ VERSION.ttf);
+}
+
+@font-face{
+    font-family: 'Brendiva';
+    src: url(./fonts/Brendiva-Medium.ttf);
 }
 
 .container {
@@ -27,6 +36,11 @@ body {
 
 h1 {
     color: #333;
+    font-family: 'Regale';
+}
+
+h2{
+    font-family: 'Brendiva';
 }
 
 input {
